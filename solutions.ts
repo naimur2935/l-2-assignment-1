@@ -24,6 +24,15 @@ function checkType(value: StringOrNumber): "String" | "Number" {
   return "Number";
 }
 
+// Problem 4
+function getProperty<T extends object, K extends keyof T>(
+  obj: T,
+  key: K
+): T[K] {
+  console.log(obj[key])
+  return obj[key];
+}
+
 
 
 
@@ -35,5 +44,7 @@ reverseString("typescript");
 checkType("Hello");
 
 checkType(42);
+
+getProperty({ id: 1, name: "John Doe", age: 21 }, "name");
 
 
