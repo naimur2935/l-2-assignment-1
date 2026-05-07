@@ -12,6 +12,18 @@ function reverseString(str: string): string {
   return reversedString;
 }
 
+// Problem 3
+type StringOrNumber = string | number;
+
+function checkType(value: StringOrNumber): "String" | "Number" {
+  if (typeof value === "string") {
+    console.log("String")
+    return "String";
+  }
+  console.log("Number")
+  return "Number";
+}
+
 
 
 
@@ -20,5 +32,8 @@ filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
 reverseString("typescript");
 
+checkType("Hello");
+
+checkType(42);
 
 
