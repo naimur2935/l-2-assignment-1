@@ -5,10 +5,20 @@ function filterEvenNumbers(numbers: number[]): number[] {
   return evenNumbers
 }
 
+// Problem 2
+function reverseString(str: string): string {
+  const reversedString = str.split("").reverse().join("");
+  console.log(reversedString);
+  return reversedString;
+}
+
+
 
 
 
 filterEvenNumbers([1, 2, 3, 4, 5, 6]);
+
+reverseString("typescript");
 
 
 
