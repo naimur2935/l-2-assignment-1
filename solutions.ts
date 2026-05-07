@@ -33,6 +33,19 @@ function getProperty<T extends object, K extends keyof T>(
   return obj[key];
 }
 
+// Problem 5
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+function toggleReadStatus(book: Book): Book & { isRead: boolean } {
+  const readStatus = { ...book, isRead: true };
+  console.log(readStatus)
+  return readStatus;
+}
+
 
 
 
@@ -47,4 +60,5 @@ checkType(42);
 
 getProperty({ id: 1, name: "John Doe", age: 21 }, "name");
 
+toggleReadStatus({ title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 });
 
