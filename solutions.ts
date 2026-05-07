@@ -46,6 +46,21 @@ function toggleReadStatus(book: Book): Book & { isRead: boolean } {
   return readStatus;
 }
 
+// Problem 6
+type Person = {
+  name: string;
+  age: number;
+};
+
+type Student = Person & {
+  grade: string;
+};
+
+function getDetails(student: Student): string {
+  const result = `Name: ${student.name}, Age: ${student.age}, Grade: ${student.grade}`;
+  console.log(result)
+  return result;
+}
 
 
 
@@ -62,3 +77,5 @@ getProperty({ id: 1, name: "John Doe", age: 21 }, "name");
 
 toggleReadStatus({ title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 });
 
+const student: Student = { name: "Alice", age: 20, grade: "A" };
+getDetails(student);
