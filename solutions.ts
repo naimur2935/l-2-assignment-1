@@ -62,6 +62,12 @@ function getDetails(student: Student): string {
   return result;
 }
 
+// Problem 7
+function getIntersection(arr1: number[], arr2: number[]): number[] {
+  const intersection = arr1.filter((n) => arr2.includes(n));
+  console.log(intersection)
+  return intersection;
+}
 
 
 
@@ -79,3 +85,5 @@ toggleReadStatus({ title: "TypeScript Guide", author: "Jane Doe", publishedYear:
 
 const student: Student = { name: "Alice", age: 20, grade: "A" };
 getDetails(student);
+
+getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
