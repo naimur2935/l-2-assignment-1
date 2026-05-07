@@ -1,35 +1,30 @@
-# B7A1 — Advanced Problem Solving with TypeScript & OOP
+# B7A1 – Advanced Problem Solving with TypeScript & OOP
 
 ## Overview
+A collection of TypeScript solutions for seven problems and two brief blog posts, part of the **Programming Hero Level 2 – Assignment 1**.
 
-This repository contains solutions to seven TypeScript problems and two blog posts, as part of the **Programming Hero Level 2 — Assignment 1**.
-
-## File Structure
-
+## Files
 ```
-├── blog-1.md       # Blog: any vs unknown & type narrowing
-├── blog-2.md       # Blog: Generics for reusable, typed code
-├── assignment.md   # Original assignment instructions
-└── README.md       # This file
+├── blog-1.md   # `any` vs `unknown`
+├── blog-2.md   # Generics in practice
+├── assignment.md   # Original brief
+└── README.md   # This file
 ```
 
-## Problems Covered
+## Implemented Tasks
+| # | Feature | Description |
+|---|---------|-------------|
+| 1 | `filterEvenNumbers` | Return even numbers |
+| 2 | `reverseString` | Reverse a string |
+| 3 | `checkType` | Distinguish string vs number |
+| 4 | `getProperty` | Generic property accessor |
+| 5 | `toggleReadStatus` | Add `isRead` flag to a book |
+| 6 | `Person` / `Student` | OOP example with `getDetails` |
+| 7 | `getIntersection` | Find common array items |
 
-| # | Function / Class | Description |
-|---|---|---|
-| 1 | `filterEvenNumbers` | Filters even numbers from an array |
-| 2 | `reverseString` | Reverses a string |
-| 3 | `checkType` | Uses type guards to identify string vs number |
-| 4 | `getProperty` | Generic function to get object property by key |
-| 5 | `toggleReadStatus` | Adds `isRead` property to a Book object |
-| 6 | `Person` / `Student` | OOP with inheritance and `getDetails` method |
-| 7 | `getIntersection` | Returns common elements between two arrays |
+## Blog Summaries
+1. **Why `any` is risky and `unknown` is safer** – type narrowing.
+2. **Generics for reusable, strongly‑typed code** – constraints and examples.
 
-## Blog Topics
-
-1. **Why `any` is a type safety hole and `unknown` is safer** — covers type narrowing techniques
-2. **How Generics enable reusable, strictly typed components** — covers constraints, generic interfaces, and classes
-
-## Technologies
-
+## Tech Stack
 - TypeScript

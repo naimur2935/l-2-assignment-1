@@ -47,19 +47,20 @@ function toggleReadStatus(book: Book): Book & { isRead: boolean } {
 }
 
 // Problem 6
-type Person = {
-  name: string;
-  age: number;
-};
+class Person {
+  constructor(public name: string, public age: number) {}
+}
 
-type Student = Person & {
-  grade: string;
-};
+class Student extends Person {
+  constructor(name: string, age: number, public grade: string) {
+    super(name, age);
+  }
 
-function getDetails(student: Student): string {
-  const result = `Name: ${student.name}, Age: ${student.age}, Grade: ${student.grade}`;
-  console.log(result)
-  return result;
+  getDetails(): string {
+    const result = `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+    console.log(result);
+    return result;
+  }
 }
 
 // Problem 7
@@ -83,7 +84,7 @@ getProperty({ id: 1, name: "John Doe", age: 21 }, "name");
 
 toggleReadStatus({ title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 });
 
-const student: Student = { name: "Alice", age: 20, grade: "A" };
-getDetails(student);
+const student = new Student("Alice", 20, "A");
+student.getDetails();
 
 getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);

@@ -1,4 +1,34 @@
-# Why `any` Is a Type Safety Hole and Why `unknown` Is the Safer Alternative
+# Why `any` Is a Type Safety Hole and `unknown` Is Safer
+
+**Introduction**
+
+`any` disables TypeScript's safety checks, letting any value pass through unchecked. This can hide bugs and break refactoring.
+
+**The Problem with `any`**
+```ts
+let data: any = "hello";
+data = 42;
+data.foo.bar;
+```
+The compiler trusts you, so runtime errors appear.
+
+**Why `unknown` Helps**
+`unknown` also accepts any value, but you must narrow its type before use:
+```ts
+let input: unknown = "hello";
+if (typeof input === "string") {
+  console.log(input.toUpperCase());
+}
+```
+The check forces safe handling.
+
+**Type Narrowing Techniques**
+- `typeof` guard
+- `instanceof` guard
+- Custom type guards
+
+**Conclusion**
+Prefer `unknown` over `any` when the type isn’t known upfront. Use narrowing to safely work with the value, preserving TypeScript’s type safety.
 
 ## Introduction
 
